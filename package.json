@@ -29,6 +29,7 @@
     "delaunator": "^5.0.1",
     "framer-motion": "^12.38.0",
     "iframe-resizer-react": "^5.1.5",
+    "kokopu": "^4.9.1",
     "kokopu-react": "^3.3.0",
     "mathjs": "^14.6.0",
     "normalize.css": "^8.0.1",
