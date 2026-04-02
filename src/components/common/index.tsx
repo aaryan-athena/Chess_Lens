@@ -1,4 +1,5 @@
 import SidebarButton from "./sidebarButton";
+import AppNavbar from "./AppNavbar";
 import CornersButton from "./cornersButton";
 import RecordButton from "./recordButton";
 import StopButton from "./stopButton";
@@ -13,8 +14,8 @@ import StudyButton from "./studyButton";
 import FenButton from "./fenButton";
 import DeviceButton from "./deviceButton";
 
-export { 
+export {
   SidebarButton, CornersButton, PgnButton, Icon, Corners,
   HomeButton, Sidebar, Container, VideoAndSidebar, RecordButton, StopButton, StudyButton,
-  FenButton, DeviceButton,
+  FenButton, DeviceButton, AppNavbar,
 };

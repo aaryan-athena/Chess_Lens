@@ -12,6 +12,7 @@ import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import { registerSW } from "virtual:pwa-register";
 import { VideoAndSidebar } from './components/common';
+import ReplayPage from './components/replay/ReplayPage';
 
 // add this to prompt for a refresh
 const updateSW = registerSW({
@@ -26,12 +27,12 @@ const updateSW = registerSW({
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/",
     element: <App />,
     children: [
-      {
-        path: "",
-        element: <Home />,
-      },
       {
         path: "/record",
         element: <VideoAndSidebar mode="record" />
@@ -41,7 +42,11 @@ const router = createBrowserRouter([
         element: <VideoAndSidebar mode="upload" />
       },
     ]
-  }
+  },
+  {
+    path: "/replay",
+    element: <ReplayPage />,
+  },
 ]);
 
 const root = createRoot(document.getElementById('root')!);

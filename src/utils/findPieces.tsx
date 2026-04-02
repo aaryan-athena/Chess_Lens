@@ -214,7 +214,7 @@ movesPairsRef: any, lastMoveRef: any, moveTextRef: any, mode: Mode) => {
       const fps: string = (1000 / (endTime - startTime)).toFixed(1);
       
       let hasMove: boolean = false;
-      if ((bestMoves !== null) && (mode !== "play")) {
+      if ((bestMoves !== null) && ((mode as string) !== "play")) {
         const move: string = bestMoves.sans[0];
         hasMove = (bestScore2 > 0) && (bestJointScore > 0) && (possibleMoves.has(move));
         if (hasMove) {
@@ -242,7 +242,7 @@ movesPairsRef: any, lastMoveRef: any, moveTextRef: any, mode: Mode) => {
       
       if (hasMove || hasGreedyMove) {
         // No takebacks in "play" mode
-        const greedy = (mode === "play") ? false : hasGreedyMove;
+        const greedy = ((mode as string) === "play") ? false : hasGreedyMove;
         const payload = makeUpdatePayload(boardRef.current, greedy);
         console.log("payload", payload);
         dispatch(gameUpdate(payload));
